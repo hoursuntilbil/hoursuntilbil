@@ -32,7 +32,7 @@ export default function Index() {
           <Link href="https://www.subtleradio.com/" color="brand.primary.500">
             the mic
           </Link>{" "}
-          {next.toLocaleString()}
+          {next.toLocaleString(DateTime.DATETIME_MED)}
         </Box>
       </Stack>
     </ThemeProvider>
