@@ -17,10 +17,10 @@ export default function Index() {
       <CSSReset />
       <Stack spacing={6} textAlign="center" shouldWrapChildren>
         <Box>
-          <Image size="200px" src="bil.png" alt="Bil Wenton" />
+          <Image size="200px" marginY="auto" src="bil.png" alt="Bil Wenton" />
         </Box>
         <Heading as="h1" size="2xl">
-          N hours to go
+          Unknown hours to go
         </Heading>
         <Box>
           MC Bil Wenton returns to{" "}

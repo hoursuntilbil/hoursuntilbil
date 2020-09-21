@@ -5,7 +5,7 @@
       "type": "node-terminal",
       "name": "Develop",
       "request": "launch",
-      "command": "npm run develop",
+      "command": "yarn develop",
       "cwd": "${workspaceFolder}"
     }
   ]
