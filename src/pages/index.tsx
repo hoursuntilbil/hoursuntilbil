@@ -16,6 +16,7 @@ import { nextShowDate } from "../utils";
 export default function Index() {
   const next = nextShowDate();
   const deltaHours = next.diff(DateTime.utc()).as("hours");
+
   return (
     <ThemeProvider theme={theme}>
       <CSSReset />
