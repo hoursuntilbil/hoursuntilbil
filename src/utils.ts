@@ -4,7 +4,7 @@ export const nextShowDate = (now?: DateTime | null): DateTime => {
   if (!now) {
     now = DateTime.utc();
   }
-  const firstPossibleDate = DateTime.utc(now.year, now.month, 8, 20, 0);
+  const firstPossibleDate = DateTime.utc(now.year, now.month, 8, 19, 0);
   const offset = (9 - firstPossibleDate.weekday) % 7;
   const thisMonth = DateTime.utc(
     now.year,
@@ -14,10 +14,10 @@ export const nextShowDate = (now?: DateTime | null): DateTime => {
     0
   );
   if (thisMonth < now) {
-    const dur = Duration.fromObject({ weeks: 4 });
-    return nextShowDate(firstPossibleDate.plus(dur));
+    const fourWeeks = Duration.fromObject({ weeks: 4 });
+    return nextShowDate(firstPossibleDate.plus(fourWeeks));
   } else {
-    return thisMonth;
+    return thisMonth.toLocal();
   }
 };
 
