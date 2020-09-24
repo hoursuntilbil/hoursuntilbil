@@ -6,7 +6,7 @@
       "name": "Develop",
       "request": "launch",
       "command": "yarn develop",
-      "cwd": "${workspaceFolder}"fo
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
