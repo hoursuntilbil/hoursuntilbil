@@ -9,6 +9,7 @@ import {
   CSSReset,
 } from "@chakra-ui/core";
 import { DateTime } from "luxon";
+import { Helmet } from "react-helmet";
 
 import theme from "../theme";
 import { nextShowDate } from "../utils";
@@ -20,9 +21,22 @@ export default function Index() {
   return (
     <ThemeProvider theme={theme}>
       <CSSReset />
-      <Stack spacing={6} textAlign="center" shouldWrapChildren paddingY="6">
+      <Helmet>
+        <title>Hours Until Bil</title>
+        <meta
+          name="description"
+          content="Hours until MC Bil Wenton next takes to the mic"
+        />
+      </Helmet>
+      <Stack spacing={6} textAlign="center" shouldWrapChildren py="6">
         <Box>
-          <Image width="200px" marginX="auto" src="bil.png" alt="Bil Wenton" />
+          <Image
+            width="200px"
+            height="200px"
+            mx="auto"
+            src="bil.png"
+            alt="Bil Wenton"
+          />
         </Box>
         <Heading as="h1" size="2xl">
           {Math.round(deltaHours)} hours to go
